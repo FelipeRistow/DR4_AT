@@ -25,6 +25,7 @@ export default function App() {
                 </Alert>
             )}
             <Routes>
+                <Route path="/" element={<div>Vá para uma página</div>} />
                 <Route path="/home" element={<Home/>} />
                 <Route path="/sign-in" element={<SignIn/>} />
                 <Route path="/sign-up" element={<SignUp/>} />
