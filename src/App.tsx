@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 import {Route, Routes} from "react-router-dom";
-import {ProtectedRoute} from "./services/utils";
+import ProtectedRoute from "./utils/ProtectedRoute";
 import Home from "./views/Home";
 import SignIn from "./views/SignIn";
 import SignUp from "./views/SignUp";
