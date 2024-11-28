@@ -1,6 +1,6 @@
 import React from 'react';
 import {Navigate} from 'react-router-dom';
-import { isLoggedIn } from './auth';
+import {isLoggedIn} from "../services/auth";
 
 interface ProtectedRouteProps{
     children: React.ReactNode;
