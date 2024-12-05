@@ -10,7 +10,7 @@ const Form: React.FC = () => {
     const navigate = useNavigate();
     const [diaperChangeTime, setDiaperChangeTime] = useState<Dayjs | null>(dayjs());
     const [diaperSituation, setDiaperSituation] = useState<string | null>("ACCEPTABLE");
-    const [cried, setCried] = useState<bool>(false);
+    const [cried, setCried] = useState<boolean>(false);
     const [note, setNote] = useState<string>("");
 
     const handleSubmit = () => {
@@ -43,6 +43,7 @@ const Form: React.FC = () => {
                     value={note}
                     onChange={(e) => setNote(e.target.value)}
                 />
+                <label htmlFor={'diaper-cried'}>Chorou?</label>
                 <Checkbox
                     checked={cried}
                     onChange={(e) => setCried(e.target.value)}
