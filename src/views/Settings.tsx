@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import {FormControlLabel, FormGroup, Switch} from "@mui/material";
+import {FormControlLabel, FormGroup} from "@mui/material";
+import Switch from "../components/Switch";
 
 const Settings: React.FC = () => {
     const [darkMode, setDarkMode] = useState<boolean>(false);

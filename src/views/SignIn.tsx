@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {login} from "../services/auth";
+import {useNavigate} from "react-router-dom";
 
-const SignIn: React.FC = () => {
+interface SignInProps {
+    onSuccess: () => void
+}
+
+const SignIn: React.FC<SignInProps> = (props) => {
+    const {onSuccess} = props;
+    const navigate = useNavigate();
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        login("IOJGHNRIOUJGNHR")
+        login("IOJGHNRIOUJGNHR");
+        onSuccess();
+        navigate("/dashboard");
     };
 
     return (

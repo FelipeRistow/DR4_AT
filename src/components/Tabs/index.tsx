@@ -2,7 +2,6 @@ import React from "react";
 import {Tabs, TabsProps} from "@mui/material";
 
 interface ITabsProps extends TabsProps {
-    props: any;
     children: React.ReactNode;
 }
 

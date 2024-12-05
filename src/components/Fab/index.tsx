@@ -2,7 +2,6 @@ import React from "react";
 import {Fab, FabProps} from "@mui/material";
 
 interface IFabProps extends FabProps {
-    props: any;
     children: React.ReactNode;
 }
 

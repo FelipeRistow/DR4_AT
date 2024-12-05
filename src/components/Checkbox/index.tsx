@@ -1,15 +1,11 @@
 import React from "react";
-import {Card, CardProps} from "@mui/material";
+import {Checkbox, CheckboxProps} from "@mui/material";
 
-interface ICardProps extends CardProps {
-    props: any;
-    children: React.ReactNode;
+interface ICheckboxProps extends CheckboxProps {
 }
 
-const CardComponent: React.FC<ICardProps> = ({children, ...props}) => {
-    return <Card {...props}>
-        {children}
-    </Card>
+const CheckboxComponent: React.FC<ICheckboxProps> = ({...props}) => {
+    return <Checkbox {...props}/>
 }
 
-export default CardComponent;
+export default CheckboxComponent;

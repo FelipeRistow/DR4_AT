@@ -8,7 +8,8 @@ import SignUp from "./views/SignUp";
 import Dashboard from "./views/Dashboard";
 import Settings from "./views/Settings";
 import Form from "./views/Form";
-import {Alert} from "@mui/material";
+import Alert from "./components/Alert";
+
 export default function App() {
     const [signInSuccess, setSignInSuccess] = React.useState(false);
 
@@ -27,7 +28,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<div>Vá para uma página</div>} />
                 <Route path="/home" element={<Home/>} />
-                <Route path="/sign-in" element={<SignIn/>} />
+                <Route path="/sign-in" element={<SignIn onSuccess={handleSignInSuccess} />} />
                 <Route path="/sign-up" element={<SignUp/>} />
                 <Route path="/dashboard" element={<Dashboard/>} />
                 <Route path="/settings" element={<Settings/>} />

@@ -1,12 +1,11 @@
 import React from "react";
-import {Snackbar, SnackbarProps} from "@mui/material";
+import {Switch, SwitchProps} from "@mui/material";
 
-interface ISnackbarProps extends SnackbarProps {
-    props: any;
+interface ISwitchProps extends SwitchProps {
 }
 
-const SnackbarComponent: React.FC<ISnackbarProps> = ({...props}) => {
-    return <Snackbar {...props}/>
+const SwitchComponent: React.FC<ISwitchProps> = ({...props}) => {
+    return <Switch {...props}/>
 }
 
-export default SnackbarComponent;
+export default SwitchComponent;

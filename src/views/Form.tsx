@@ -1,14 +1,20 @@
 import React, {useState} from 'react';
 import dayjs, {Dayjs} from "dayjs";
-import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import {Button, FormControl, InputLabel, MenuItem, Select} from "@mui/material";
+import DateTimePicker from "../components/DateTimePicker";
+import {useNavigate} from "react-router-dom";
+import TextField from "../components/TextField";
+import Checkbox from "../components/Checkbox";
 
 const Form: React.FC = () => {
-    const [diaperChangeTime, setDiaperChangeTime] = useState<Dayjs>(dayjs());
-    const [diaperSituation, setDiaperSituation] = useState<string | null>(null);
+    const navigate = useNavigate();
+    const [diaperChangeTime, setDiaperChangeTime] = useState<Dayjs | null>(dayjs());
+    const [diaperSituation, setDiaperSituation] = useState<string | null>("ACCEPTABLE");
+    const [cried, setCried] = useState<bool>(false);
+    const [note, setNote] = useState<string>("");
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+    const handleSubmit = () => {
+        navigate("/dashboard", {state: {created: true}});
     };
 
     return (
@@ -27,13 +33,21 @@ const Form: React.FC = () => {
                     <MenuItem value={"GOOD"}>Boa</MenuItem>
                 </Select>
                 <div style={{height: 50}}></div>
-                <label id={'diaper-change-time'}>Trocada em</label>
                 <DateTimePicker
-                    labelId={'diaper-change-time'}
+                    label={'Trocada em'}
                     value={diaperChangeTime}
-                    onChange={(e) => setDiaperChangeTime(e.target.value)}
+                    onChange={(value) => setDiaperChangeTime(value)}
                 />
-                <Button type={"submit"}>SALVAR</Button>
+                <TextField
+                    label={'Observação'}
+                    value={note}
+                    onChange={(e) => setNote(e.target.value)}
+                />
+                <Checkbox
+                    checked={cried}
+                    onChange={(e) => setCried(e.target.value)}
+                />
+                <Button onClick={handleSubmit}>SALVAR</Button>
             </FormControl>
         </div>
     );

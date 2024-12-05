@@ -2,7 +2,6 @@ import React from "react";
 import {Box, BoxProps} from "@mui/material";
 
 interface IBoxProps extends BoxProps {
-    props: any;
     children: React.ReactNode;
 }
 

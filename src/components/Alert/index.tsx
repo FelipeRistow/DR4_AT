@@ -2,7 +2,6 @@ import React from "react";
 import {Alert, AlertProps} from "@mui/material";
 
 interface IAlertProps extends AlertProps {
-    props: any;
     children: React.ReactNode;
 }
 

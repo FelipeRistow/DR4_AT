@@ -2,7 +2,6 @@ import React from "react";
 import {Typography, TypographyProps} from "@mui/material";
 
 interface ITypographyProps extends TypographyProps {
-    props: any;
     children: React.ReactNode;
 }
 
