@@ -46,7 +46,7 @@ const Form: React.FC = () => {
                 <label htmlFor={'diaper-cried'}>Chorou?</label>
                 <Checkbox
                     checked={cried}
-                    onChange={(e) => setCried(e.target.value)}
+                    onChange={(e) => setCried(e.target.checked)}
                 />
                 <Button onClick={handleSubmit}>SALVAR</Button>
             </FormControl>

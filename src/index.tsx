@@ -5,7 +5,6 @@ import { BrowserRouter } from "react-router-dom";
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
-
 const rootElement = document.getElementById("root")!;
 const root = ReactDOM.createRoot(rootElement);
 

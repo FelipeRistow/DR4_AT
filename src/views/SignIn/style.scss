@@ -1,0 +1,66 @@
+.AuthForm {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .Form {
+    height: 50%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    color: white;
+
+    &.signup {
+      height: 60%;
+    }
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.2px);
+    -webkit-backdrop-filter: blur(13.2px);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    padding: 40px;
+    box-sizing: border-box;
+
+    .InputGroup {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    label {
+      margin: 5px 0;
+      font-size: 20px;
+    }
+
+    input {
+      background: none;
+      border: 1px solid gray;
+      height: 40px;
+      padding: 0 20px;
+      border-radius: 5px;
+    }
+
+    a {
+      &:hover {
+        cursor: pointer;
+      }
+
+      text-decoration: underline;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      column-gap: 10px;
+    }
+  }
+}
